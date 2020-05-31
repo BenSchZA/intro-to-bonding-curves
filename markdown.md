@@ -2,6 +2,17 @@
 ### For beginners
 
 ---
+## Who is this for?
+* An overview of the technical landscape of bonding curves, for beginners
+* Providing context for deeper exploration
+
+---
+## Basic Properties
+* A function of (at least) token price and supply
+* Monotonically increasing
+* Deterministic
+
+---
 ## Misconceptions
 * Bonding curves are ponzi schemes
 * Bonding curves are for funding
@@ -39,12 +50,6 @@ where R is the reserve, S is the supply, and P is the spot price.
 * Price discovery
 * TCR: token curated registry
 * Continuous fundraising
-
----
-## Basic Properties
-* A function of (at least) token price and supply
-* Monotonically increasing
-* Deterministic
 
 ---
 ## A Design Canvas
