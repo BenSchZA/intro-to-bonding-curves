@@ -12,6 +12,8 @@
 * Monotonically increasing
 * Deterministic
 
+![monotonic-function](./assets/basic-chart.png)
+
 ---
 ## Misconceptions
 * Bonding curves are ponzi schemes
@@ -34,9 +36,8 @@ $$``
 
 where R is the reserve, S is the supply, and P is the spot price.
 
-
 --
-* Market cap: market capitalization - 
+* Market cap: market capitalization
 * Price sensitivity: the proportionate effect of each token transaction on the spot price
 * Collateral: the token held in the reserve
 * Reserve: the store of value backing the token supply
@@ -72,10 +73,10 @@ where R is the reserve, S is the supply, and P is the spot price.
 
 ---
 ## Modelling & Simulations
-* Robustness
-* Edge cases
-* Sensitivity analysis
-* System bounds
+* Testing robustness
+* Finding edge cases
+* Performing sensitivity analysis
+* Defining system bounds
 
 --
 ## Actor model
@@ -91,6 +92,10 @@ where R is the reserve, S is the supply, and P is the spot price.
 
 --
 ## Solidity & EVM
+* Implementing integrals and inverse integrals of higher order functions becomes challenging
+* Staying within limits of int256 overflows and underflows
+* Handling front running of transactions
+* Batched processing of transactions within single block - can't guarrantee spot price without slippage
 
 ---
 ## In the wild...
@@ -111,13 +116,25 @@ where R is the reserve, S is the supply, and P is the spot price.
 --
 ## Molecule
 
+--
+## SourceCred
+
+--
+## Balancer
+
+--
+## IXO Impact Bonds
+
 ---
 ## Trends
+* Application of engineering methodology
 * Introducing more degrees of freedom (e.g. risk-adjusted bonding curves)
-* Time as a variable (e.g. conviction voting)
-* Bonding curves as system interfaces (e.g. commons stack)
+* Introducing time as a variable (e.g. conviction voting)
+* Using bonding curves as system interfaces (e.g. commons stack)
+* Composability of bonding curves within modular systems
 
 ---
 ## Resources
 * www.tokenengineering.net
 * https://community.cadcad.org
+* This presentation! https://tokenengineeringcommunity.github.io/intro-to-bonding-curves/
