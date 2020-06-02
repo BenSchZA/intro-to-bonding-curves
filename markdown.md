@@ -17,7 +17,11 @@
 ---
 ## Misconceptions
 * Bonding curves are ponzi schemes
-* Bonding curves are for funding
+* Bonding curves are for funding 
+(I've heard this questions numerous times, thanks for addressing it in your talk!!
+Similar:
+* Bonding curves are for exchanges only
+* Bonding curves eliminate speculation)
 
 ---
 ## Terminology
@@ -112,6 +116,7 @@ where R is the reserve, S is the supply, and P is the spot price.
 
 --
 ## Uniswap
+(you might also address the question why Uniswap has become so much more popular than Bancor. A matter of the curve design? PR?)
 
 --
 ## Molecule
@@ -135,6 +140,6 @@ where R is the reserve, S is the supply, and P is the spot price.
 
 ---
 ## Resources
-* www.tokenengineering.net
+* www.tokenengineering.org (pls note: we've launched a new website!)
 * https://community.cadcad.org
 * This presentation! https://tokenengineeringcommunity.github.io/intro-to-bonding-curves/
