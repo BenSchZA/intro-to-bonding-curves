@@ -58,12 +58,12 @@ Source: https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how
 ## Terminology
 
 --
-## Invariant:
-> a property or relationship that remains constant e.g. reserve ratio
+## Invariant
+> A property or relationship that remains constant e.g. reserve ratio.
 
 --
-## Reserve ratio:
-> the ratio of the token reserve to token market cap. at a point
+## Reserve ratio
+> The ratio of the token reserve to token market cap. at a point.
 
 ``$$
 \text{Reserve ratio} = \frac{R}{S*P}
@@ -72,21 +72,52 @@ $$``
 where R is the reserve, S is the supply, and P is the spot price.
 
 --
-* Market cap: market capitalization
-* Price sensitivity: the proportionate effect of each token transaction on the spot price
-* Collateral: the token held in the reserve
-* Reserve: the store of value backing the token supply
-* Supply: the tokens issued in exchange for reserve collateral
-* Spot price: the token value at a point
-* Primitive function: the function describing the relationship between the token price and supply
-* Leverage ratio
-* Slippage
-* Vesting
-* Market maker
-* Price discovery
-* TCR: token curated registry
-* Continuous fundraising
-* Liquidity
+## Collateral and reserve
+> Collateral is the token backing the reserve;
+> reserve is the store of value backing the token supply.
+
+--
+## Market cap. (market capitalization)
+> Share price multiplied by the number of shares outstanding.
+* Or... spot price multiplied by total token supply.
+
+--
+## Supply
+> The tokens issued in exchange for reserve collateral.
+
+--
+## Primitive function
+> The function describing the relationship between the token price and supply.
+
+--
+## Spot price
+> The value of a single token at a point along a curve.
+
+--
+## Slippage & price sensitivity
+> The proportionate effect of each token transaction on the spot price.
+* Given a spot price and a number of tokens transacted, what is the percentage *slippage* from market value?
+
+--
+## Leverage ratio
+> The ratio of market cap. and the underlying reserve collateral.
+* The higher the leverage ratio, the higher the price sensitivity, and the higher the slippage.
+
+--
+## Liquidity
+> The availability of liquid assets for transactions and trade.
+
+--
+## Market maker
+> A mechanism or actor that creates liquidity, by providing collateral in exchange for a given token.
+* Coming up: Automated Market Makers
+
+(in the case of a traditional order book, this definition is different, and involves giving both a buy and sell price for an asset - making a profit on the spread)
+
+--
+## Price discovery
+> The price discovery process is the process of determining the price of an asset in the marketplace through the interactions of buyers and sellers.
+* The same holds true for bonding curve mechanisms, in a less organic, more deterministic manner.
 
 ---
 ## Automated market makers & liquidity providers
@@ -204,6 +235,10 @@ See https://docs.balancer.finance/protocol/background
 * Introducing time as a variable (e.g. conviction voting)
 * Using bonding curves as system interfaces (e.g. commons stack)
 * Composability of bonding curves within modular systems
+
+---
+## Contributions
+* Angela @akrtws, founding member of TE global community
 
 ---
 ## Resources
