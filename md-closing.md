@@ -11,8 +11,8 @@
 ## Complex systems
 
 * Complex systems — highly connected networks of semi-independent agents from which system wide patterns emerge—that can learn and adapt over time.
-* Human social systems … capable of independent spontaneous, self-organization.
-* Agents whose interactions result in self-organization, emergence, and adaptation.
+<!-- * Human social systems … capable of independent spontaneous, self-organization. -->
+<!-- * Agents whose interactions result in self-organization, emergence, and adaptation. -->
 
 Source: https://www.mdpi.com/2079-8954/7/1/4/htm
 
