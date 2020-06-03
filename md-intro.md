@@ -115,7 +115,9 @@ Source: https://yos.io/2018/11/10/bonding-curves/
 
 --
 ## Invariant
-> A property or relationship that remains constant e.g. reserve ratio.
+> A mathematical property or relationship that remains constant e.g. reserve ratio.
+
+Explore: https://www.quantamagazine.org/math-invariants-helped-lisa-piccirillo-solve-conway-knot-problem-20200602/
 
 --
 ## Liquidity
