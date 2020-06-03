@@ -30,6 +30,8 @@
 ## Scarcity in the digital domain
 * Blockchain enables the concept of scarcity
 * Solves the double spending problem
+
+Note:
 * Becomes a source of truth, enables the concept of ownership
 * Classic example: apple vs. digital image of apple
 
@@ -62,13 +64,15 @@ Source: https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how
 
 --
 ## Collateral and reserve
-> Collateral is the token backing the reserve;
-> reserve is the store of value backing the token supply.
+> Collateral is the value that is provided in exchange for the token supply.
+
+> The reserve is the pool of value backing the token supply, made up of collateral.
 
 --
 ## Market cap. (market capitalization)
 > Share price multiplied by the number of shares outstanding.
-* Or... spot price multiplied by total token supply.
+
+> Spot price multiplied by total token supply.
 
 --
 ## Supply
