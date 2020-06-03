@@ -1,4 +1,4 @@
-## A Technical Introduction to Bonding Curves
+# A Technical Introduction to Bonding Curves
 ### For beginners
 
 ---
@@ -79,6 +79,11 @@ Source: https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how
 > The function describing the relationship between the token price and supply.
 
 --
+<p class="stretch"><img src="./assets/integral.jpeg"></p>
+
+Source: https://yos.io/2018/11/10/bonding-curves/
+
+--
 ## Spot price
 > The value of a single token at a point along a curve.
 
@@ -93,8 +98,9 @@ $$``
 where R is the reserve, S is the supply, and P is the spot price.
 
 --
-## Invariant
-> A property or relationship that remains constant e.g. reserve ratio.
+<p class="stretch"><img src="./assets/reserve-ratio.png"></p>
+
+Source: https://yos.io/2018/11/10/bonding-curves/
 
 --
 ## Slippage & price sensitivity
@@ -105,6 +111,11 @@ where R is the reserve, S is the supply, and P is the spot price.
 ## Leverage ratio
 > The ratio of market cap. and the underlying reserve collateral.
 * The higher the leverage ratio, the higher the price sensitivity, and the higher the slippage.
+* Inverse of reserve ratio.
+
+--
+## Invariant
+> A property or relationship that remains constant e.g. reserve ratio.
 
 --
 ## Liquidity
@@ -159,6 +170,11 @@ Note:
 * larger trades (relative to reserves) execute at exponentially worse rates than smaller ones
 * Uniswap applies a trade fee, which increases k, and pays out liquidity providers
 * arbitrage acts to rebalance
+
+--
+<p class="stretch"><img src="./assets/uniswap.png"></p>
+
+Source:  Markus Koch, BlockScience - https://youtu.be/d-YfF-xNuz4
 
 --
 ## Balancer

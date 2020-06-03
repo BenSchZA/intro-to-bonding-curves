@@ -10,6 +10,12 @@
 --
 ## Complex systems
 
+* Complex systems — highly connected networks of semi-independent agents from which system wide patterns emerge—that can learn and adapt over time.
+* Human social systems … capable of independent spontaneous, self-organization.
+* Agents whose interactions result in self-organization, emergence, and adaptation.
+
+Source: https://www.mdpi.com/2079-8954/7/1/4/htm
+
 ---
 # Patterns and Classification
 
@@ -27,6 +33,7 @@
 --
 * Bringing engineering practise to token engineering.
 * An iterative design cycle.
+
 > Design informs development.
 
 <p class="stretch"><img src="./assets/design-development.png"></p>
@@ -38,14 +45,17 @@ Source: Nick Hirannet, BlockScience
 * Design validation
 * Testing robustness
 * Finding edge cases
+* Finding emergent properties of complex systems
 * Performing sensitivity analysis
 * Defining system bounds
+* Aligning incentives
 
 --
 ## How?
 * Actor model
-* Incentive design
 * cadCAD framework
+
+> a Python package that assists in the processes of designing, testing and validating complex systems through simulation, with support for Monte Carlo methods, A/B testing and parameter sweeping
 
 --
 ## Validation & verification
