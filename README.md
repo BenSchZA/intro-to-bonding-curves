@@ -1,6 +1,6 @@
 # A technical introduction to bonding curves, for beginners
 
-This is a Reveal.JS presentation. See the `markdown.md` file for presentation details. Anyone is welcome to open up a PR and contribute!
+This is a Reveal.JS presentation. See the `*.md` files and index.html for presentation content. Anyone is welcome to open up a PR and contribute!
 
 See the `gh-pages` branch which is automatically deployed to https://tokenengineeringcommunity.github.io/intro-to-bonding-curves
 

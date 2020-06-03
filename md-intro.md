@@ -24,14 +24,17 @@
 * Uniswap is a bonding curve
 
 ---
-## Background: Scarcity in the digital domain
+# Background
+
+--
+## Scarcity in the digital domain
 * Blockchain enables the concept of scarcity
 * Solves the double spending problem
 * Becomes a source of truth, enables the concept of ownership
 * Classic example: apple vs. digital image of apple
 
 --
-## Background: Liquidity & microeconomics
+## Liquidity & microeconomics
 
 ![order book](./assets/order-book.png)
 
@@ -43,7 +46,7 @@ Source: https://bitcoin.stackexchange.com
 * Dependent on trade volumes
 
 --
-## Background: Price discovery
+## Price discovery
 
 ![price discovery](./assets/price-discovery.png)
 
@@ -55,21 +58,7 @@ Source: https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how
 * Bonding curves can be a primitive price discovery mechanism
 
 ---
-## Terminology
-
---
-## Invariant
-> A property or relationship that remains constant e.g. reserve ratio.
-
---
-## Reserve ratio
-> The ratio of the token reserve to token market cap. at a point.
-
-``$$
-\text{Reserve ratio} = \frac{R}{S*P}
-$$``
-
-where R is the reserve, S is the supply, and P is the spot price.
+# Terminology
 
 --
 ## Collateral and reserve
@@ -92,6 +81,20 @@ where R is the reserve, S is the supply, and P is the spot price.
 --
 ## Spot price
 > The value of a single token at a point along a curve.
+
+--
+## Reserve ratio
+> The ratio of the token reserve to token market cap. at a point.
+
+``$$
+\text{Reserve ratio} = \frac{R}{S*P}
+$$``
+
+where R is the reserve, S is the supply, and P is the spot price.
+
+--
+## Invariant
+> A property or relationship that remains constant e.g. reserve ratio.
 
 --
 ## Slippage & price sensitivity
@@ -120,8 +123,8 @@ where R is the reserve, S is the supply, and P is the spot price.
 * The same holds true for bonding curve mechanisms, in a less organic, more deterministic manner.
 
 ---
-## Automated market makers & liquidity providers
-* Are they bonding curves?
+# Automated market makers & liquidity providers
+> Are they bonding curves?
 
 --
 ## Bancor
@@ -166,82 +169,3 @@ Note:
 > "generalization of the constant product rule, allowing for 2 or more tokens as well as the choice of arbitrary value weights for each token. The weights represent the share of value each token represents in the total pool value."
 
 See https://docs.balancer.finance/protocol/background
-
----
-## A Design Canvas
-
----
-## Design Parameters
-* Time
-* Issuance e.g. ERC20, ERC721
-* Supply
-* Collateral
-* Function
-* Pricing
-* Composition e.g. piecewise
-
----
-## Patterns and Classification
-
---
-## Static vs. Dynamic
-
----
-## Modelling & Simulations
-* Testing robustness
-* Finding edge cases
-* Performing sensitivity analysis
-* Defining system bounds
-
---
-## Actor model
-
---
-## Incentive design
-
---
-## cadCAD framework
-
----
-## Limitations
-
---
-## Solidity & EVM
-* Implementing integrals and inverse integrals of higher order functions becomes challenging
-* Staying within limits of int256 overflows and underflows
-* Handling front running of transactions
-* Batched processing of transactions within single block - can't guarrantee spot price without slippage
-
----
-## In the wild...
-* Coordination mechanisms
-* Interfaces
-* Configuration spaces
-* Funding mechanisms
-* Voting
-* Composability
-* Community currencies & micro-economies
-
---
-* Commons Stack conviction voting
-* Molecule markets
-* SourceCred
-* IXO Impact Bonds
-
----
-## Trends
-* Application of engineering methodology
-* Introducing more degrees of freedom (e.g. risk-adjusted bonding curves)
-* Introducing time as a variable (e.g. conviction voting)
-* Using bonding curves as system interfaces (e.g. commons stack)
-* Composability of bonding curves within modular systems
-
----
-## Contributions
-* Angela @akrtws, founding member of TE global community
-
----
-## Resources
-* www.tokenengineering.org
-* https://community.cadcad.org
-* This presentation is on GitHub, alongside other useful resources! https://tokenengineeringcommunity.github.io/intro-to-bonding-curves/

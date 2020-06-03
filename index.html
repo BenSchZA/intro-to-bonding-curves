@@ -20,10 +20,18 @@
 	<div class="reveal">
 		<div class="slides">
 			<section
-				data-markdown="markdown.md"
+				data-markdown="md-intro.md"
 				data-separator="^---"
 				data-separator-vertical="^--"
-				data-separator-notes="^Note:"></section>
+				data-separator-notes="^Note:">
+			</section>
+			<section data-external="md-canvas.html"></section>
+			<section
+				data-markdown="md-closing.md"
+				data-separator="^---"
+				data-separator-vertical="^--"
+				data-separator-notes="^Note:">
+			</section>
 		</div>
 	</div>
 
@@ -45,7 +53,15 @@
 				TeX: { Macros: { RR: "{\\bf R}" } }
 				},
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath]
+			dependencies: [
+				{ src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } }
+			],
+			plugins: [
+				RevealMarkdown,
+				RevealHighlight,
+				RevealNotes,
+				RevealMath
+			]
 		});
 	</script>
 </body>
