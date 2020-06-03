@@ -14,6 +14,7 @@
 
 (We will see variations and extensions of these basic properties, but this is where it all started.)
 
+--
 ![monotonic function](./assets/basic-chart.png)
 
 ---
@@ -23,11 +24,29 @@
 * Uniswap is a bonding curve
 
 ---
-## Background: ''Traditional'' Microeconomics
+## Background: Scarcity in the digital domain
+* Blockchain enables the concept of scarcity
+* Solves the double spending problem
+* Becomes a source of truth, enables the concept of ownership
+* Classic example: apple vs. digital image of apple
+
+--
+## Background: Liquidity & microeconomics
 * Balance of liquidity and risk; market makers and market takers
 * An order book provides liquidity; willing seller & willing buyer
+* Dependent on trade volumes
 
+--
 ![order book](./assets/order-book.png)
+
+Source: https://bitcoin.stackexchange.com
+
+--
+## Background: Price discovery
+
+![price discovery](./assets/price-discovery.png)
+
+Source: https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how-does-it-work--190605
 
 ---
 ## Terminology
