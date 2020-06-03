@@ -52,7 +52,7 @@ Source: Nick Hirannet, BlockScience
 
 --
 ## How?
-* Actor model
+* Actor modelling
 * cadCAD framework
 
 > a Python package that assists in the processes of designing, testing and validating complex systems through simulation, with support for Monte Carlo methods, A/B testing and parameter sweeping
@@ -67,18 +67,17 @@ Source: Michael Zargham, BlockScience
 ---
 ## In the wild...
 * Coordination mechanisms
-* Interfaces
+* System interfaces
 * Configuration spaces
 * Funding mechanisms
 * Voting
-* Composability
 * Community currencies & micro-economies
 
---
+<!-- --
 * Commons Stack conviction voting
 * Molecule markets
 * SourceCred
-* IXO Impact Bonds
+* IXO Impact Bonds -->
 
 ---
 ## Trends
