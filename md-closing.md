@@ -90,7 +90,8 @@ Source: Michael Zargham, BlockScience
 
 ---
 ## Contributions
-* Angela @akrtws, founding member of TE global community
+* Angela Kreitenweis @akrtws (GitHub), founding member of TE global community
+* Benjamin Scholtz @benscholtz (Twitter) & @benschza (GitHub), author
 
 ---
 ## Resources
