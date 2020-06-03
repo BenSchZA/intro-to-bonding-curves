@@ -12,16 +12,22 @@
 * Monotonically increasing
 * Deterministic
 
-![monotonic-function](./assets/basic-chart.png)
+(We will see variations and extensions of these basic properties, but this is where it all started.)
+
+![monotonic function](./assets/basic-chart.png)
 
 ---
 ## Misconceptions
 * Bonding curves are ponzi schemes
-* Bonding curves are for funding 
-(I've heard this questions numerous times, thanks for addressing it in your talk!!
-Similar:
-* Bonding curves are for exchanges only
-* Bonding curves eliminate speculation)
+* Bonding curves are for funding, exchanges, & eliminate speculation
+* Uniswap is a bonding curve
+
+---
+## Background: ''Traditional'' Microeconomics
+* Balance of liquidity and risk; market makers and market takers
+* An order book provides liquidity; willing seller & willing buyer
+
+![order book](./assets/order-book.png)
 
 ---
 ## Terminology
@@ -55,6 +61,7 @@ where R is the reserve, S is the supply, and P is the spot price.
 * Price discovery
 * TCR: token curated registry
 * Continuous fundraising
+* Liquidity
 
 ---
 ## A Design Canvas
@@ -113,10 +120,35 @@ where R is the reserve, S is the supply, and P is the spot price.
 
 --
 ## Bancor
+* Traditionally the role of order book matching.
+* Defines liquidity pools with token reserves
+
+``$$
+Price = \frac{\text{Reserve balance}}{\text{Token supply} * \text{Reserve ratio}}
+$$``
+
+Note:
+* the point to understand, is that all bonding mechanisms, define a mathematical pricing relationship and some form of invariant
 
 --
 ## Uniswap
-(you might also address the question why Uniswap has become so much more popular than Bancor. A matter of the curve design? PR?)
+* Is Uniswap a bonding curve? Not in a strict sense.
+* Does it share some of the same properties? Yes.
+* Defines a pricing relationship between the reserve of two ERC20 token pools.
+* An "Automated Liquidity Provider"
+
+``$$
+x*y = k
+$$``
+
+`x` and `y` are reserve balance in a token pair, and k is the **invariant**!
+
+See https://uniswap.org/docs/v2/
+
+Note:
+* larger trades (relative to reserves) execute at exponentially worse rates than smaller ones
+* Uniswap applies a trade fee, which increases k, and pays out liquidity providers
+* arbitrage acts to rebalance
 
 --
 ## Molecule
