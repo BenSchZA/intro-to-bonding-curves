@@ -32,14 +32,15 @@
 
 --
 ## Background: Liquidity & microeconomics
-* Balance of liquidity and risk; market makers and market takers
-* An order book provides liquidity; willing seller & willing buyer
-* Dependent on trade volumes
 
---
 ![order book](./assets/order-book.png)
 
 Source: https://bitcoin.stackexchange.com
+
+--
+* Balance of liquidity and risk; market makers and market takers
+* An order book provides liquidity; willing seller & willing buyer
+* Dependent on trade volumes
 
 --
 ## Background: Price discovery
@@ -47,6 +48,11 @@ Source: https://bitcoin.stackexchange.com
 ![price discovery](./assets/price-discovery.png)
 
 Source: https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how-does-it-work--190605
+
+--
+* Producer and consumer reach an equilibrium
+* With some price elasticity
+* Bonding curves can be a primitive price discovery mechanism
 
 ---
 ## Terminology
@@ -81,6 +87,54 @@ where R is the reserve, S is the supply, and P is the spot price.
 * TCR: token curated registry
 * Continuous fundraising
 * Liquidity
+
+---
+## Automated market makers & liquidity providers
+* Are they bonding curves?
+
+--
+## Bancor
+* Traditionally the role of order book matching
+* Defines liquidity pools with one or more token reserves, price adjusted to maintain reserve ratio
+* Always available, constant liquidity source
+* Reserve ratio is the...? Invariant.
+
+``$$
+Price = \frac{\text{Reserve balance}}{\text{Token supply} * \text{Reserve ratio}}
+$$``
+
+Note:
+* the point to understand, is that all bonding mechanisms, define a mathematical pricing relationship and some form of invariant
+
+--
+## Uniswap
+* Is Uniswap a bonding curve? Not in a strict sense.
+* Does it share some of the same properties? Yes.
+* Defines a constant product relationship between the reserve of two ERC20 token pools.
+* An "Automated Liquidity Provider"
+
+``$$
+x*y = k
+$$``
+
+`x` and `y` are the reserve balance in a token pair, and k is the **invariant**!
+
+See https://uniswap.org/docs/v2/
+
+Note:
+* larger trades (relative to reserves) execute at exponentially worse rates than smaller ones
+* Uniswap applies a trade fee, which increases k, and pays out liquidity providers
+* arbitrage acts to rebalance
+
+--
+## Balancer
+* An automated market maker, extending on ideas of Alan Lu from Gnosis, implemented by Uniswap
+* 2 or more tokens in a pool
+
+--
+> "generalization of the constant product rule, allowing for 2 or more tokens as well as the choice of arbitrary value weights for each token. The weights represent the share of value each token represents in the total pool value."
+
+See https://docs.balancer.finance/protocol/background
 
 ---
 ## A Design Canvas
@@ -138,48 +192,10 @@ where R is the reserve, S is the supply, and P is the spot price.
 * Community currencies & micro-economies
 
 --
-## Bancor
-* Traditionally the role of order book matching.
-* Defines liquidity pools with token reserves
-
-``$$
-Price = \frac{\text{Reserve balance}}{\text{Token supply} * \text{Reserve ratio}}
-$$``
-
-Note:
-* the point to understand, is that all bonding mechanisms, define a mathematical pricing relationship and some form of invariant
-
---
-## Uniswap
-* Is Uniswap a bonding curve? Not in a strict sense.
-* Does it share some of the same properties? Yes.
-* Defines a pricing relationship between the reserve of two ERC20 token pools.
-* An "Automated Liquidity Provider"
-
-``$$
-x*y = k
-$$``
-
-`x` and `y` are reserve balance in a token pair, and k is the **invariant**!
-
-See https://uniswap.org/docs/v2/
-
-Note:
-* larger trades (relative to reserves) execute at exponentially worse rates than smaller ones
-* Uniswap applies a trade fee, which increases k, and pays out liquidity providers
-* arbitrage acts to rebalance
-
---
-## Molecule
-
---
-## SourceCred
-
---
-## Balancer
-
---
-## IXO Impact Bonds
+* Commons Stack conviction voting
+* Molecule markets
+* SourceCred
+* IXO Impact Bonds
 
 ---
 ## Trends
@@ -191,6 +207,6 @@ Note:
 
 ---
 ## Resources
-* www.tokenengineering.org (pls note: we've launched a new website!)
+* www.tokenengineering.org
 * https://community.cadcad.org
-* This presentation! https://tokenengineeringcommunity.github.io/intro-to-bonding-curves/
+* This presentation is on GitHub, alongside other useful resources! https://tokenengineeringcommunity.github.io/intro-to-bonding-curves/
