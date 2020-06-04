@@ -3,14 +3,23 @@
 
 ---
 ## Who is this for?
-* An overview of the technical landscape of bonding curves, for beginners
-* Providing context for deeper exploration
+> An overview of the technical landscape of bonding curves, for beginners!
+
+---
+## What we're going to achieve
+1. Understand the technical background, and lingo, of bonding curves (so you can speak about it with your friends).
+
+2. See how the idea of bonding curves has evolved and been extended.
+
+3. Gain confidence for deeper token engineering exploration.
 
 ---
 ## Basic Properties
-* A function of (at least) token price and supply
-* Monotonically increasing
-* Deterministic
+* A function of token price and supply
+
+* Always increasing (monotonic)
+
+* Deterministic (given the same input, it will have the same output)
 
 (We will see variations and extensions of these basic properties, but this is where it all started.)
 
@@ -20,8 +29,10 @@
 ---
 ## Misconceptions
 * Bonding curves are ponzi schemes
-* Bonding curves are for funding, exchanges, & eliminate speculation
-* Uniswap is a bonding curve
+
+* Bonding curves are only used for funding, exchanges, & eliminate speculation
+
+* Uniswap is a bonding curve (kind of)
 
 ---
 # Background
@@ -29,6 +40,7 @@
 --
 ## Scarcity in the digital domain
 * Blockchain enables the concept of scarcity
+
 * Solves the double spending problem
 
 Note:
@@ -36,16 +48,15 @@ Note:
 * Classic example: apple vs. digital image of apple
 
 --
-## Liquidity & microeconomics
+## Liquidity
 
-![order book](./assets/order-book.png)
+<p class="stretch"><img src="./assets/order-book.png"></p>
 
 Source: https://bitcoin.stackexchange.com
 
 --
-* Balance of liquidity and risk; market makers and market takers
+> The availability of liquid assets for transactions and trade.
 * An order book provides liquidity; willing seller & willing buyer
-* Dependent on trade volumes
 
 --
 ## Price discovery
@@ -55,9 +66,12 @@ Source: https://bitcoin.stackexchange.com
 Source: https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how-does-it-work--190605
 
 --
-* Producer and consumer reach an equilibrium
-* With some price elasticity
+> The price discovery process is the process of determining the price of an asset in the marketplace through the interactions of buyers and sellers.
+
 * Bonding curves can be a primitive price discovery mechanism
+
+Note:
+* With some price elasticity
 
 ---
 # Terminology
@@ -68,10 +82,10 @@ Source: https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how
 
 > The reserve is the pool of value backing the token supply, made up of collateral.
 
+<p class="stretch"><img src="./assets/riemann-sum.gif"></p>
+
 --
 ## Market cap. (market capitalization)
-> Share price multiplied by the number of shares outstanding.
-
 > Spot price multiplied by total token supply.
 
 --
@@ -79,17 +93,24 @@ Source: https://www.ig.com/en/trading-strategies/what-is-price-discovery-and-how
 > The tokens issued in exchange for reserve collateral.
 
 --
-## Primitive function
+Visualizing market cap and supply:
+![monotonic function](./assets/basic-chart.png)
+
+Note:
+* show market cap and supply
+
+--
+## Bonding curve function
 > The function describing the relationship between the token price and supply.
+
+--
+## Spot price
+> The value of a single token at a point along a curve.
 
 --
 <p class="stretch"><img src="./assets/integral.jpeg"></p>
 
 Source: https://yos.io/2018/11/10/bonding-curves/
-
---
-## Spot price
-> The value of a single token at a point along a curve.
 
 --
 ## Reserve ratio
@@ -111,83 +132,24 @@ Source: https://yos.io/2018/11/10/bonding-curves/
 > The proportionate effect of each token transaction on the spot price.
 * Given a spot price and a number of tokens transacted, what is the percentage *slippage* from market value?
 
---
+<!-- --
 ## Leverage ratio
 > The ratio of market cap. and the underlying reserve collateral.
 * The higher the leverage ratio, the higher the price sensitivity, and the higher the slippage.
-* Inverse of reserve ratio.
+* Inverse of reserve ratio. -->
 
 --
 ## Invariant
 > A mathematical property or relationship that remains constant e.g. reserve ratio.
 
-Explore: https://www.quantamagazine.org/math-invariants-helped-lisa-piccirillo-solve-conway-knot-problem-20200602/
+![invariant](./assets/invariant.png)
 
---
-## Liquidity
-> The availability of liquid assets for transactions and trade.
+<!-- Explore: https://www.quantamagazine.org/math-invariants-helped-lisa-piccirillo-solve-conway-knot-problem-20200602/ -->
 
 --
 ## Market maker
 > A mechanism or actor that creates liquidity, by providing collateral in exchange for a given token.
 * Coming up: Automated Market Makers
 
-(in the case of a traditional order book, this definition is different, and involves giving both a buy and sell price for an asset - making a profit on the spread)
-
---
-## Price discovery
-> The price discovery process is the process of determining the price of an asset in the marketplace through the interactions of buyers and sellers.
-* The same holds true for bonding curve mechanisms, in a less organic, more deterministic manner.
-
----
-# Automated market makers & liquidity providers
-> Are they bonding curves?
-
---
-## Bancor
-* Traditionally the role of order book matching
-* Defines liquidity pools with one or more token reserves, price adjusted to maintain reserve ratio
-* Always available, constant liquidity source
-* Reserve ratio is the...? Invariant.
-
-``$$
-Price = \frac{\text{Reserve balance}}{\text{Token supply} * \text{Reserve ratio}}
-$$``
-
 Note:
-* the point to understand, is that all bonding mechanisms, define a mathematical pricing relationship and some form of invariant
-
---
-## Uniswap
-* Is Uniswap a bonding curve? Not in a strict sense.
-* Does it share some of the same properties? Yes.
-* Defines a constant product relationship between the reserve of two ERC20 token pools.
-* An "Automated Liquidity Provider"
-
-``$$
-x*y = k
-$$``
-
-`x` and `y` are the reserve balance in a token pair, and k is the **invariant**!
-
-See https://uniswap.org/docs/v2/
-
-Note:
-* larger trades (relative to reserves) execute at exponentially worse rates than smaller ones
-* Uniswap applies a trade fee, which increases k, and pays out liquidity providers
-* arbitrage acts to rebalance
-
---
-<p class="stretch"><img src="./assets/uniswap.png"></p>
-
-Source:  Markus Koch, BlockScience - https://youtu.be/d-YfF-xNuz4
-
---
-## Balancer
-* An automated market maker, extending on ideas of Alan Lu from Gnosis, implemented by Uniswap
-* 2 or more tokens in a pool
-
---
-> "generalization of the constant product rule, allowing for 2 or more tokens as well as the choice of arbitrary value weights for each token. The weights represent the share of value each token represents in the total pool value."
-
-See https://docs.balancer.finance/protocol/background
+* in the case of a traditional order book, this definition is different, and involves giving both a buy and sell price for an asset - making a profit on the spread
