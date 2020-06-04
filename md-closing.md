@@ -38,7 +38,7 @@ Source: https://www.mdpi.com/2079-8954/7/1/4/htm
 
 <p class="stretch"><img src="./assets/design-development.png"></p>
 
-Source: Nick Hirannet, BlockScience
+Source: Michael Zargham, BlockScience
 
 --
 ## Why?
