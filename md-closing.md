@@ -74,6 +74,11 @@ See https://docs.balancer.finance/protocol/background
 * Batched processing of transactions within single block - can't guarrantee spot price without slippage
 
 --
+(Some blurry bonding code so I don't get questioned)
+![solidity](./assets/solidity.png)
+![vyper](./assets/vyper.png)
+
+--
 ## Complex systems
 
 > Complex systems — highly connected networks of semi-independent agents from which system wide patterns emerge—that can learn and adapt over time.
