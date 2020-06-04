@@ -2,7 +2,9 @@
 
 This is a Reveal.JS presentation. See the `*.md` files and index.html for presentation content. Anyone is welcome to open up a PR and contribute!
 
-See the `gh-pages` branch which is automatically deployed to https://tokenengineeringcommunity.github.io/intro-to-bonding-curves
+Automatically deployed to:
+* `gh-pages` branch for condensed version: https://tokenengineeringcommunity.github.io/intro-to-bonding-curves
+* `master` branch for extended version: https://intro-to-bonding-curves-extended.netlify.app
 
 ## Reveal.JS
 
